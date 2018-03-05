@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone git://git.code.sf.net/p/mutillidae/git src
+git clone git://git.code.sf.net/p/mutillidae/git mutillidae
 
-mv conf/database-config.php src/includes/database-config.php
+cp conf/database-config.php mutillidae/includes/database-config.php
 

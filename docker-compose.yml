@@ -6,9 +6,25 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./src:/var/www/html
+      - ./mutillidae:/var/www/html
     depends_on:
       - mysql
+
+  hacker:
+    image: richarvey/nginx-php-fpm
+    container_name: hacker
+    ports:
+      - 81:80
+    volumes:
+      - ./hacker:/var/www/html
+
+  server:
+    image: richarvey/nginx-php-fpm
+    container_name: server
+    ports:
+      - 82:80
+    volumes:
+      - ./server:/var/www/html
 
   mysql:
     image: mysql:5.6
